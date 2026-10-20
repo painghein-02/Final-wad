@@ -61,7 +61,13 @@ export async function POST(req) {
             user: { id: user._id, username: user.username, email: user.email, role: user.role }
         }, { status: 200, headers: corsHeaders });
 
-        res.cookies.set("token", token, { httpOnly: true, path: "/" });
+
+        res.cookies.set("token", token, {
+            httpOnly: true,
+            path: "/",
+            secure: true,
+            sameSite: "none"
+        });
 
         console.log("11. Done!");
         return res;
