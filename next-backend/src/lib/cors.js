@@ -16,7 +16,7 @@ let corsHeaders = {
   "Access-Control-Allow-Origin":
     process.env.NODE_ENV === "development"
       ? "http://localhost:5173"
-      : "https://your-frontend-app.vercel.app",
+      : "https://final-wad-2tgc.vercel.app",
   "Access-Control-Allow-Methods": "GET, POST, PUT, PATCH, DELETE, OPTIONS",
   "Access-Control-Allow-Headers": "Content-Type, Authorization, x-user-id, x-user-email, x-user-name, x-user-role",
   "Access-Control-Max-Age": "86400",
